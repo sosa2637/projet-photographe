@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "DM Photographie <onboarding@resend.dev>",  // IMPORTANT
+      from: "DM Photographie  <contact@leslieewane.ca>",  // IMPORTANT
       to: "essongewane@gmail.com",
       subject: "📸 Nouveau message du formulaire",
       text: `Nom : ${nom}\nEmail : ${email}\n\nMessage :\n${message}`
@@ -23,3 +23,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Échec de l'envoi", details: error });
   }
 }
+
