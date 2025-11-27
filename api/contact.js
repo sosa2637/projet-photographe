@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "DM Photographie <contact@tondomaine.com>",
+      from: "DM Photographie <onboarding@resend.dev>",
       to: "essongewane@gmail.com",
       subject: "📸 Nouveau message du formulaire de contact",
       text: `
@@ -29,3 +29,4 @@ ${message}
     return res.status(500).json({ error: "Échec de l'envoi", details: error });
   }
 }
+
